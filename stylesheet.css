@@ -1,0 +1,62 @@
+body {
+  max-width: 900px;
+}
+
+button {
+  background-color: #cbeaed;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  color: #222831;
+  font-size: 14px;
+}
+
+.container {
+  border: solid 2px #006a71;
+  background: linear-gradient(#fffde4, #005aa7);
+  border-radius: 10px;
+  padding: 40px 80px;
+  margin: 50px 50px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #222831;
+}
+
+.currentWeather {
+  border: 2px solid #006a71;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.mainTemp {
+  font-size: 64px;
+  font-weight: 400px;
+  line-height: 1;
+}
+
+.fas {
+  font-size: 60px;
+  padding-right: 20px;
+}
+
+.units {
+  position: relative;
+  top: -30px;
+}
+.card {
+  text-align: center;
+}
+.card-title {
+  font-size: 16px;
+}
+.text-muted {
+  font-size: 14px;
+}
