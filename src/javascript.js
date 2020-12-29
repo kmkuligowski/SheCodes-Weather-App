@@ -16,6 +16,8 @@ if (mins<10){
 function showTemp(response){
    let iconElement= document.querySelector("#icon");
 
+   fTemperature= response.data.main.temp;
+
   document.querySelector("#city-name").innerHTML=response.data.name;
 
   document.querySelector("#main-temp").innerHTML=Math.round(response.data.main.temp);
@@ -53,6 +55,12 @@ function getCurrentPosition(){
   navigator.geolocation.getCurrentPosition(usePosition);
 }
 
+function showCelsiusChange(event){
+event.preventDefault();
+let cTemperature=Math.round(fTemperature-32 * 5/9);
+let temperatureElement=document.querySelector("#main-temp");
+temperatureElement.innerHTML=cTemperature;
+}
 let h4 = document.querySelector("#date");
 let currentDate= new Date();
 h4.innerHTML= formatDate(currentDate);
@@ -60,11 +68,14 @@ h4.innerHTML= formatDate(currentDate);
 let form = document.querySelector("form");
 form.addEventListener("submit", submitCity);
 
+let fTemperature="null"
+
 let locationButton= document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentPosition);
 
 searchCity("Boston");
-//let cChangeTemp= document.querySelector("#celsius");
-//cChangeTemp.addEventListener("click",cChange);
+
+let celsiusLink= document.querySelector("#celsius");
+celsiusLink.addEventListener("click",showCelsiusChange);
 
 
