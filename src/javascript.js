@@ -14,6 +14,8 @@ if (mins<10){
 }
 
 function showTemp(response){
+   let iconElement= document.querySelector("#icon");
+
   document.querySelector("#city-name").innerHTML=response.data.name;
 
   document.querySelector("#main-temp").innerHTML=Math.round(response.data.main.temp);
@@ -23,8 +25,9 @@ function showTemp(response){
  document.querySelector("#wind-speed").innerHTML=Math.round(response.data.wind.speed);
 
   document.querySelector("#humid-percentage").innerHTML=(response.data.main.humidity);
-  console.log(response);
+ iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) 
 }
+
 function searchCity(city){
 let apiKey ="0ee65006a00c913e43ac0bf2c3ea0b12";
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
