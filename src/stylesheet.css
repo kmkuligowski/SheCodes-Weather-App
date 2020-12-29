@@ -27,8 +27,8 @@ footer {
 }
 
 .currentWeather {
-  border: 2px solid #006a71;
-  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
   background-color: #ffffff;
   padding: 20px 20px;
   font-size: 20px;
@@ -51,6 +51,7 @@ footer {
   position: relative;
   top: -30px;
 }
+
 .card {
   text-align: center;
 }
