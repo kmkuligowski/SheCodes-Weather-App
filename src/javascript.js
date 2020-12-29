@@ -61,6 +61,14 @@ let cTemperature=Math.round(fTemperature-32 * 5/9);
 let temperatureElement=document.querySelector("#main-temp");
 temperatureElement.innerHTML=cTemperature;
 }
+
+function showFahrenheitChange(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#main-temp");
+  temperatureElement.innerHTML=Math.round(fTemperature);
+}
+
+
 let h4 = document.querySelector("#date");
 let currentDate= new Date();
 h4.innerHTML= formatDate(currentDate);
@@ -73,9 +81,12 @@ let fTemperature="null"
 let locationButton= document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentPosition);
 
-searchCity("Boston");
 
 let celsiusLink= document.querySelector("#celsius");
 celsiusLink.addEventListener("click",showCelsiusChange);
 
+let fahrenheitLink=document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitChange);
 
+
+searchCity("Boston");
