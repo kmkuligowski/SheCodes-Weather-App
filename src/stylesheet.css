@@ -1,5 +1,5 @@
 body {
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 button {
@@ -17,8 +17,8 @@ footer {
 }
 
 .container {
-  border: solid 2px #006a71;
-  background: linear-gradient(#fffde4, #005aa7);
+  border: solid 2px rgba(0, 0, 0, 0.125);
+  background: linear-gradient(#fffde4, #2e92eb);
   border-radius: 10px;
   padding: 40px 80px;
   margin: 50px 50px;
@@ -52,12 +52,14 @@ footer {
   top: -30px;
 }
 
-.card {
+.weather-forecast {
   text-align: center;
+  font: #ffffff;
+  padding: 10px;
 }
-.card-title {
-  font-size: 16px;
-}
-.text-muted {
-  font-size: 14px;
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
 }
