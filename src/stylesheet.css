@@ -12,12 +12,12 @@ li {
 
 footer {
   text-align: center;
-  color: #ffffff;
+  color: #222831;
   font-size: 14px;
 }
 
 .container {
-  border: solid 2px rgba(0, 0, 0, 0.125);
+  border: solid 1px #222831;
   background: linear-gradient(#fffde4, #2e92eb);
   border-radius: 10px;
   padding: 40px 80px;
@@ -57,6 +57,17 @@ footer {
   font: #ffffff;
   padding: 10px;
 }
+
+.active {
+  color: #222831;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #222831;
+}
+
 .weather-forecast img {
   display: block;
   margin: 0 auto;
